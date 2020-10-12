@@ -13,12 +13,12 @@ function Categories() {
                 <div className="card-body">
                     <div className="row">
                         
-                        < Category />
-                        < Category />
-                        < Category />
-                        < Category />
-                        < Category />
-                        < Category />
+                        < Category id="1" />
+                        < Category id="2"/>
+                        < Category id="3"/>
+                        < Category id="4"/>
+                        < Category id="5"/>
+                        < Category id="6"/>
                         
                     </div>
                 </div>
