@@ -1,7 +1,7 @@
 import React from 'react';
 import Header from './Header';
 import Categories from './Categories';
-import Cards from './Cards';
+import TotalsPanel from './TotalsPanel';
 import Footer from './Footer';
 import AllProducts from './AllProducts';
 import LastProduct from './LastProduct';
@@ -26,7 +26,7 @@ function Wrapper() {
                     </div>
 
                     
-                    <Cards />
+                    <TotalsPanel />
 
 
                     

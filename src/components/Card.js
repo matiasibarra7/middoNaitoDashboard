@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types'
+//import PropTypes from 'prop-types'
 
 
 function Card(props) {
@@ -24,7 +24,7 @@ function Card(props) {
   );
 }
 
-Card.propTypes = {
+/* Card.propTypes = {
   title:  PropTypes.string,
   value:  PropTypes.string,
   iconClass:  PropTypes.string,
@@ -36,7 +36,7 @@ Card.defaultProps = {
   value:  'No definido',
   colorClass:  'border-left-primary',
   iconClass:  'fa-question'
-}
+} */
 
 
 export default Card;

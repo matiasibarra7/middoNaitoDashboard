@@ -53,7 +53,7 @@ function AllProducts() {
       <div className="card shadow mb-4">
         <div className="card-body">
           <div className="table-responsive">
-            <table className="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+            <table className="table table-bordered" id="dataTable" width="100%" cellSpacing="0">
               <thead>
                 {titleColumns}
               </thead>
@@ -63,6 +63,7 @@ function AllProducts() {
               <tbody>
                 {productData.map((person, i) => {
                   return <ProductItem 
+                    key= {i + person.name}
                     name= {person.name}
                     description= {person.description}
                     price= {person.price}
