@@ -15,9 +15,9 @@ function ProductItem(props) {
       </td>
       <td>
         <ul>
-          <li><span class="text-danger">{props.colors[0]}</span></li>
-          <li><span class="text-primary">{props.colors[1]}</span></li>
-          <li><span class="text-success">{props.colors[2]}</span></li>
+          <li><span className="text-danger">{props.colors[0]}</span></li>
+          <li><span className="text-primary">{props.colors[1]}</span></li>
+          <li><span className="text-success">{props.colors[2]}</span></li>
         </ul>
       </td>
       <td>{props.stock}</td>

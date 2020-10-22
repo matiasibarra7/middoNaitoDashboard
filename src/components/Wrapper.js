@@ -6,6 +6,8 @@ import Footer from './Footer';
 import AllProducts from './AllProducts';
 import LastProduct from './LastProduct';
 
+import MiddoNaito from './MiddoNaito';
+
 function Wrapper() {
   return (
     <>
@@ -31,6 +33,8 @@ function Wrapper() {
                     <div className="row">
                     
                         <LastProduct />
+
+                        <MiddoNaito />
 
                         <Categories />
                     

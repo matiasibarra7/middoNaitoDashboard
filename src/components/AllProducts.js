@@ -48,12 +48,12 @@ function AllProducts() {
 
   return (
     <>
-      <h1 class="h3 mb-2 text-gray-800">All the products in the Database</h1>
+      <h1 className="h3 mb-2 text-gray-800">All the products in the Database</h1>
       
-      <div class="card shadow mb-4">
-        <div class="card-body">
-          <div class="table-responsive">
-            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+      <div className="card shadow mb-4">
+        <div className="card-body">
+          <div className="table-responsive">
+            <table className="table table-bordered" id="dataTable" width="100%" cellspacing="0">
               <thead>
                 {titleColumns}
               </thead>
