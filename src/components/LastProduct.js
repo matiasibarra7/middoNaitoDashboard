@@ -37,6 +37,7 @@ class LastProduct extends Component {
                   <div className="text-center"> 
                     <img className="img-fluid px-3 px-sm-4 mt-3 mb-4" style={{width: '25rem'}} src={this.state.productData.imageUrl} alt="imagen dummy"/>   
                   </div>
+                    <p>{this.state.productData.name}</p>
                     <p>{this.state.productData.description}</p>
                     <a href={`http://localhost:3000/products/details/${this.state.productData.id}`}>View product detail</a>
                 </div>

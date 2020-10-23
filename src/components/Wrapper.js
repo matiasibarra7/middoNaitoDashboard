@@ -3,10 +3,10 @@ import Header from './Header';
 import Categories from './Categories';
 import TotalsPanel from './TotalsPanel';
 import Footer from './Footer';
-import AllProducts from './AllProducts';
+import AllProductsMN from './AllProductsMN';
 import LastProduct from './LastProduct';
+import LastUser from './LastUser';
 
-import MiddoNaito from './MiddoNaito';
 
 function Wrapper() {
   return (
@@ -34,14 +34,14 @@ function Wrapper() {
                     
                         <LastProduct />
 
-                        <MiddoNaito />
+                        <LastUser />
 
                         <Categories />
                     
                         
                     </div>
                     
-                    <AllProducts />
+                    <AllProductsMN />
                     
                 </div>
                 
