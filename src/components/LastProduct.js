@@ -19,15 +19,12 @@ class LastProduct extends Component {
     .then(lastProduct => {
 
       this.setLastProduct(lastProduct)
-      //console.log(lastProduct)
 
     });
   }
 
   render() {
     
-    /* this.state.productData? console.log(this.state.productData.imageUrl) : console.log('todavia no existe') */
-    console.log(this.state.productData)
     return (
       <>
         {this.state.productData? 
@@ -37,11 +34,11 @@ class LastProduct extends Component {
                     <h6 className="m-0 font-weight-bold text-primary">Last product in Data Dase</h6>
                 </div>
                 <div className="card-body">
-                    <div className="text-center"> 
-                      <img className="img-fluid px-3 px-sm-4 mt-3 mb-4" style={{width: '25rem'}} src={this.state.productData.imageUrl} alt="imagen dummy"/>   
-                    </div>
-                      <p>{this.state.productData.description}</p>
-                      <a href={`http://localhost:3001/products/details/${this.state.productData.id}`}>View product detail</a>
+                  <div className="text-center"> 
+                    <img className="img-fluid px-3 px-sm-4 mt-3 mb-4" style={{width: '25rem'}} src={this.state.productData.imageUrl} alt="imagen dummy"/>   
+                  </div>
+                    <p>{this.state.productData.description}</p>
+                    <a href={`http://localhost:3001/products/details/${this.state.productData.id}`}>View product detail</a>
                 </div>
             </div>
           </div>
