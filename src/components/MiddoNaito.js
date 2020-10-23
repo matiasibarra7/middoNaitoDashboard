@@ -14,7 +14,7 @@ class MiddoNaito extends Component {
   };
 
   componentDidMount(){
-    fetch('http://localhost:3001/api/users')
+    fetch('http://localhost:3000/api/users')
       .then(response => response.json())
       .then(dataFinal => {
         
@@ -36,6 +36,7 @@ class MiddoNaito extends Component {
         return <UsuarioMN 
           key= {i + person.firstName}
           firstName= {person.firstName}
+          lastName= {person.lastName}
         />
       })}
       </ul>

@@ -14,7 +14,7 @@ class LastProduct extends Component {
 
 
   componentDidMount(){
-    fetch('http://localhost:3001/api/products/last')
+    fetch('http://localhost:3000/api/products/last')
     .then(response => response.json())
     .then(lastProduct => {
 
@@ -38,7 +38,7 @@ class LastProduct extends Component {
                     <img className="img-fluid px-3 px-sm-4 mt-3 mb-4" style={{width: '25rem'}} src={this.state.productData.imageUrl} alt="imagen dummy"/>   
                   </div>
                     <p>{this.state.productData.description}</p>
-                    <a href={`http://localhost:3001/products/details/${this.state.productData.id}`}>View product detail</a>
+                    <a href={`http://localhost:3000/products/details/${this.state.productData.id}`}>View product detail</a>
                 </div>
             </div>
           </div>

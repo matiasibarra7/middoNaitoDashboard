@@ -15,11 +15,11 @@ class TotalsPanel extends Component{
 
 
   componentDidMount(){
-    fetch('http://localhost:3001/api/products')
+    fetch('http://localhost:3000/api/products')
       .then(response => response.json())
       .then(dataFinal => {
 
-        fetch('http://localhost:3001/api/users')
+        fetch('http://localhost:3000/api/users')
         .then(response => response.json())
         .then(dataFinalUsers => {
 

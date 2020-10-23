@@ -20,7 +20,7 @@ function AllProducts() {
       stock: 245
     },
     {
-      name: 'Matías Ibarra',
+      name: 'Juan Peralta',
       description: 'Fullstack developer, NodeJs and React',
       price: '$40,000',
       categories: ['1', '2', '3'],
@@ -28,12 +28,20 @@ function AllProducts() {
       stock: 7
     },
     {
-      name: 'Jennifer Arsuaga',
-      description: 'Fullstack developer arquitect',
-      price: '$720,800',
+      name: 'Jane Doe',
+      description: 'Fullstack developer',
+      price: '$320,800',
       categories: ['1', '2', '3'],
       colors: ['Red', 'Blue', 'Green'],
-      stock: 120
+      stock: 245
+    },
+    { 
+      name: 'Tiger Nixon',
+      description: 'System Architect',
+      price: '$320,800',
+      categories: ['1', '2', '3'],
+      colors: ['Red', 'Blue', 'Green'],
+      stock: 245
     }
   ]
 
