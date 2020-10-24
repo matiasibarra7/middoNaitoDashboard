@@ -14,8 +14,8 @@ function Card(props) {
                 <div className="h5 mb-0 font-weight-bold text-gray-800">
                   {
                     props.value? props.value 
-                    : <div class="spinner-border" role="status">
-                        <span class="sr-only">Loading...</span>
+                    : <div className="spinner-border" role="status">
+                        <span className="sr-only">Loading...</span>
                       </div>
                   }
                 </div>

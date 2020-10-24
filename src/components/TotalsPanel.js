@@ -40,11 +40,10 @@ class TotalsPanel extends Component{
   }
 
   render() {
-    console.log(this.state)
     const cardsData = [
       {title:  "Total Products", //total de productos
       value:  this.state.totalProducts,
-      iconClass:  "fa-clipboard-list",
+      iconClass:  "fa-tshirt",
       colorClass:  "border-left-primary"},
   
       {title:  "Total Users", //total de usuarios
@@ -54,7 +53,7 @@ class TotalsPanel extends Component{
   
       {title: "Total Categories", //total de categorias
       value: this.state.totalCategories,
-      iconClass: "fa-user-check",
+      iconClass: "fa-clipboard-list",
       colorClass: "border-left-warning"},
 
       {title: "Total Price Products", //total de categorias
