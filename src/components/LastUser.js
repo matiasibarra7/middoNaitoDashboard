@@ -14,7 +14,7 @@ class LastUser extends Component {
 
 
   componentDidMount(){
-    fetch('http://localhost:3000/api/users/last')
+    fetch('http://localhost:3000/api/users/last-user')
     .then(response => response.json())
     .then(lastUser => {
 
@@ -26,26 +26,30 @@ class LastUser extends Component {
   render() {
     
     return (
-      <>
-        {this.state.userData? 
-          <div className="col-lg-6 mb-4">
-            <div className="card shadow mb-4">
-                <div className="card-header py-3">
-                    <h6 className="m-0 font-weight-bold text-primary">Last user in Data Base</h6>
-                </div>
-                <div className="card-body">
+      <div className="col-lg-6 mb-4">
+        <div className="card shadow mb-4">
+            <div className="card-header py-3">
+              <h6 className="m-0 font-weight-bold text-primary">Last user in Data Base</h6>
+            </div>
+            <div className="card-body">
+              {this.state.userData?
+                <>
                   <div className="text-center"> 
                     <img className="img-fluid px-3 px-sm-4 mt-3 mb-4" style={{width: '25rem'}} src={this.state.userData.imageUrl} alt="imagen dummy"/>   
                   </div>
                   <p>{this.state.userData.firstName} {this.state.userData.lastName}</p>
                   <p>Register date: {this.state.userData.registerDate}</p>
                   <a href={`http://localhost:3000/api/users/${this.state.userData.id}`}>View user detail</a>
+                </>
+              : <div class="d-flex justify-content-center">
+                  <div class="spinner-border" role="status">
+                    <span class="sr-only">Loading...</span>
+                  </div>
                 </div>
+              }
             </div>
-          </div>
-          :<div>Cargando...</div>
-        }
-      </>
+        </div>
+      </div>      
     );
   }
 }

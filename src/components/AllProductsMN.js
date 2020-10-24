@@ -12,7 +12,7 @@ class AllProducts extends Component{
   };
 
 
-  componentDidMount(){
+  componentDidMount() {
     fetch('http://localhost:3000/api/products/all')
     .then(response => response.json())
     .then(productsData => {
@@ -21,7 +21,7 @@ class AllProducts extends Component{
 
     });
   }
-  render(){
+  render() {
 
     return (
       <>
@@ -70,7 +70,12 @@ class AllProducts extends Component{
                 </tbody>
               </table>
             </div>
-          :<div>Cargando...</div>}
+          : <div class="d-flex justify-content-center">
+              <div class="spinner-border" role="status">
+                <span class="sr-only">Loading...</span>
+              </div>
+            </div>
+          }
           </div>
         </div>
         
