@@ -12,8 +12,7 @@ class LastUser extends Component {
     this.setState({ userData: user })
   };
 
-
-  componentDidMount(){
+  componentDidMount() {
     fetch('http://localhost:3000/api/users/last-user')
     .then(response => response.json())
     .then(lastUser => {
@@ -21,7 +20,36 @@ class LastUser extends Component {
       this.setLastUser(lastUser)
 
     });
-  }
+  };
+
+
+  toggleModal() {
+    let divModal = document.querySelector(".modal-naito");
+  
+    divModal.classList.toggle("active")
+
+  };
+
+  generateModal() {
+    let modal = `
+      <div class="close-icon-modal" onclick=toggleModal()>X</div>
+      
+      <h4><b>User Details</b></h4>
+      <div>
+        <p><b>First Name:</b> ${this.state.userData.firstName}</p>
+        <p><b>Last Name:</b> ${this.state.userData.lastName}</p>
+        <p><b>E-mail:</b> ${this.state.userData.email}</p>
+        <p><b>Register Date:</b> ${this.state.userData.registerDate}</p>
+        <p><b>Gender:</b> ${this.state.userData.gender? this.state.userData.gender : "Unspecified"}</p>
+        <p><b>Province:</b> ${this.state.userData.province? this.state.userData.province : "Unspecified"}</p>
+        <p><b>Location:</b> ${this.state.userData.location? this.state.userData.location : "Unspecified"}</p>
+        <p><b>Birthday:</b> ${this.state.userData.birthday? this.state.userData.birthday : "Unspecified"}</p>
+      </div>
+    `
+    let divModalNaito = document.querySelector(".modal-naito")  
+    divModalNaito.innerHTML = modal
+    this.toggleModal()
+  };
 
   render() {
     
@@ -39,13 +67,13 @@ class LastUser extends Component {
                   </div>
                   <p>{this.state.userData.firstName} {this.state.userData.lastName}</p>
                   <p>Register date: {this.state.userData.registerDate}</p>
-                  <a href={`http://localhost:3000/api/users/${this.state.userData.id}`}>View user detail</a>
+                  <button type="button" className="btn btn-info" onClick={ () => this.generateModal() }>View user details</button>
                 </>
-              : <div className="d-flex justify-content-center">
-                  <div className="spinner-border" role="status">
-                    <span className="sr-only">Loading...</span>
+                : <div className="d-flex justify-content-center">
+                    <div className="spinner-border" role="status">
+                      <span className="sr-only">Loading...</span>
+                    </div>
                   </div>
-                </div>
               }
             </div>
         </div>

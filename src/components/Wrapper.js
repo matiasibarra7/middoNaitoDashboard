@@ -11,8 +11,10 @@ import LastUser from './LastUser';
 function Wrapper() {
   return (
     <>
+
         <div id="content-wrapper" className="d-flex flex-column">
 
+        <div className="cover-modal"></div>
         
             <div id="content">
 
@@ -44,7 +46,9 @@ function Wrapper() {
                     <AllProductsMN />
                     
                 </div>
-                
+
+            <div className="modal-naito"></div>
+
             </div>
 
 
